@@ -349,7 +349,7 @@ form.addEventListener('input', () => {
 let getData = localStorage.getItem('allData');
 getData = JSON.parse(getData);
 
-if (getData !=== null) {
+if (getData !== null) {
   names.value = getData.userName;
   formMail.value = getData.userMail;
   text.value = getData.userMessage;
