@@ -134,7 +134,7 @@ const allData = [
 let restProjects = '';
 let cardNumber = 0;
 let number = 0;
-for (let i = 2; i <= 6; i += 1) {
+for (let i = 0; i <= 6; i += 1) {
   number = i + 1;
   cardNumber = `data${number}`;
   const titleCards = allData[i][cardNumber].title;
@@ -278,7 +278,7 @@ function filling() {
   for (
     let j = 0;
     j < Object.keys(allData[numberCard][project].tools).length;
-    j += 1
+    j == 1
   ) {
     lis += `<li class="cont2 margin">${allData[numberCard][project].tools[j]}</li>`;
   }
@@ -349,7 +349,7 @@ form.addEventListener('input', () => {
 let getData = localStorage.getItem('allData');
 getData = JSON.parse(getData);
 
-if (getData != null) {
+if (getData !=== null) {
   names.value = getData.userName;
   formMail.value = getData.userMail;
   text.value = getData.userMessage;
